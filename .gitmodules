@@ -1,3 +1,6 @@
 [submodule "resources/opengl_sb_5"]
 	path = resources/opengl_sb_5
 	url = https://github.com/flyingwjw/OpenGL_SuperBible_5th_Edition_Source_Code.git
+[submodule "resources/learnopengl"]
+	path = resources/learnopengl
+	url = https://github.com/JoeyDeVries/LearnOpenGL.git
