@@ -132,3 +132,4 @@ dmypy.json
 .idea/
 bin/
 cmake-build-debug/
+build-*/
