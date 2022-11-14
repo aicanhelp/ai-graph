@@ -4,7 +4,7 @@
 // Program by Richard S. Wright Jr.
 #include <GLTools.h>	// OpenGL toolkit
 #include <GLFrustum.h>
-#include <Stopwatch.h>
+#include <StopWatch.h>
 
 #ifdef __APPLE__
 #include <glut/glut.h>

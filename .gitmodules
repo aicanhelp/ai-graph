@@ -4,3 +4,6 @@
 [submodule "resources/learnopengl"]
 	path = resources/learnopengl
 	url = https://github.com/JoeyDeVries/LearnOpenGL.git
+[submodule "resources/colmap"]
+	path = resources/colmap
+	url = https://github.com/colmap/colmap.git

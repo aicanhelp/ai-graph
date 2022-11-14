@@ -1,0 +1,239 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/QtCreator/share/qtcreator/package-manager/auto-setup.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "/home/modongsong/workspace/github-aican/ai-graph/content/build-opengl-sb5-Desktop_Qt_6_4_0_GCC_64bit-Debug/CMakeFiles/3.23.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "/home/modongsong/workspace/github-aican/ai-graph/content/build-opengl-sb5-Desktop_Qt_6_4_0_GCC_64bit-Debug/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindGLEW.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindGLUT.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/home/modongsong/Qt/Tools/CMake/share/cmake-3.23/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"path" : "src/GLTools/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter01/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter02/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter03/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter04/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter05/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter06/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter07/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter08/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter09/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter10/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter11/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter12/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter13/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Chapter15/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/modongsong/workspace/github-aican/ai-graph/content/build-opengl-sb5-Desktop_Qt_6_4_0_GCC_64bit-Debug",
+		"source" : "/home/modongsong/workspace/github-aican/ai-graph/content/opengl-sb5"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
