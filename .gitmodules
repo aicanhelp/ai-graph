@@ -7,3 +7,9 @@
 [submodule "resources/colmap"]
 	path = resources/colmap
 	url = https://github.com/colmap/colmap.git
+[submodule "resources/libre-translate"]
+	path = resources/libre-translate
+	url = https://github.com/LibreTranslate/LibreTranslate.git
+[submodule "resources/clip-as-service"]
+	path = resources/clip-as-service
+	url = https://github.com/jina-ai/clip-as-service.git

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012-2015 Graham Sellers
+ * Copyright ï¿½ 2012-2015 Graham Sellers
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -27,16 +27,13 @@
 #include <sb7color.h>
 #include <object.h>
 
-class bindlesstex_app : public sb7::application
-{
+class bindlesstex_app : public sb7::application {
 public:
-    bindlesstex_app()
-    {
+    bindlesstex_app() {
 
     }
 
-    void init()
-    {
+    void init() {
         static const char title[] = "OpenGL SuperBible - Bindless Textures";
 
         sb7::application::init();
@@ -45,54 +42,51 @@ public:
     }
 
     void startup();
+
     void render(double currentTime);
+
     void shutdown();
+
     void onKey(int key, int action);
 
 protected:
     void load_shaders();
 
-    enum
-    {
-        NUM_TEXTURES        = 384,
-        TEXTURE_LEVELS      = 5,
-        TEXTURE_SIZE        = (1 << (TEXTURE_LEVELS - 1))
+    enum {
+        NUM_TEXTURES = 384,
+        TEXTURE_LEVELS = 5,
+        TEXTURE_SIZE = (1 << (TEXTURE_LEVELS - 1))
     };
 
-    GLuint      program;
+    GLuint program;
 
-    struct
-    {
-        GLint   mv_matrix;
-        GLint   vp_matrix;
+    struct {
+        GLint mv_matrix;
+        GLint vp_matrix;
     } uniforms;
 
-    struct
-    {
-        GLuint      name;
-        GLuint64    handle;
+    struct {
+        GLuint name;
+        GLuint64 handle;
     } textures[1024];
 
-    struct
-    {
-        GLuint      transformBuffer;
-        GLuint      textureHandleBuffer;
+    struct {
+        GLuint transformBuffer;
+        GLuint textureHandleBuffer;
     } buffers;
-    
-    struct MATRICES
-    {
-        vmath::mat4     view;
-        vmath::mat4     projection;
-        vmath::mat4     model[NUM_TEXTURES];
+
+    struct MATRICES {
+        vmath::mat4 view;
+        vmath::mat4 projection;
+        vmath::mat4 model[NUM_TEXTURES];
     };
 
-    sb7::object     object;
+    sb7::object object;
 };
 
 static unsigned int seed = 0x13371337;
 
-static inline unsigned int random_uint()
-{
+static inline unsigned int random_uint() {
     float res;
     unsigned int tmp;
 
@@ -103,8 +97,7 @@ static inline unsigned int random_uint()
     return tmp;
 }
 
-void bindlesstex_app::startup()
-{
+void bindlesstex_app::startup() {
     int i;
     int j;
 
@@ -112,10 +105,8 @@ void bindlesstex_app::startup()
     unsigned int mutated_data[32 * 32];
     memset(tex_data, 0, sizeof(tex_data));
 
-    for (i = 0; i < 32; i++)
-    {
-        for (j = 0; j < 32; j++)
-        {
+    for (i = 0; i < 32; i++) {
+        for (j = 0; j < 32; j++) {
             tex_data[i * 4 * 32 + j * 4] = (i ^ j) << 3;
             tex_data[i * 4 * 32 + j * 4 + 1] = (i ^ j) << 3;
             tex_data[i * 4 * 32 + j * 4 + 2] = (i ^ j) << 3;
@@ -138,17 +129,16 @@ void bindlesstex_app::startup()
                     nullptr,
                     GL_MAP_WRITE_BIT);
 
-    GLuint64* pHandles = (GLuint64*)glMapBufferRange(GL_UNIFORM_BUFFER, 0, NUM_TEXTURES * sizeof(GLuint64) * 2, GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+    GLuint64 *pHandles = (GLuint64 *) glMapBufferRange(GL_UNIFORM_BUFFER, 0, NUM_TEXTURES * sizeof(GLuint64) * 2,
+                                                       GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
 
-    for (i = 0; i < NUM_TEXTURES; i++)
-    {
+    for (i = 0; i < NUM_TEXTURES; i++) {
         unsigned int r = (random_uint() & 0xFCFF3F) << (random_uint() % 12);
         glGenTextures(1, &textures[i].name);
         glBindTexture(GL_TEXTURE_2D, textures[i].name);
         glTexStorage2D(GL_TEXTURE_2D, TEXTURE_LEVELS, GL_RGBA8, TEXTURE_SIZE, TEXTURE_SIZE);
-        for (j = 0; j < 32 * 32; j++)
-        {
-            mutated_data[j] = (((unsigned int *)tex_data)[j] & r) | 0x20202020;
+        for (j = 0; j < 32 * 32; j++) {
+            mutated_data[j] = (((unsigned int *) tex_data)[j] & r) | 0x20202020;
         }
         glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, TEXTURE_SIZE, TEXTURE_SIZE, GL_RGBA, GL_UNSIGNED_BYTE, mutated_data);
         glGenerateMipmap(GL_TEXTURE_2D);
@@ -160,21 +150,20 @@ void bindlesstex_app::startup()
     glUnmapBuffer(GL_UNIFORM_BUFFER);
 
     load_shaders();
-    
+
     object.load("media/objects/torus_nrms_tc.sbm");
 }
 
-void bindlesstex_app::render(double currentTime)
-{
+void bindlesstex_app::render(double currentTime) {
     static double last_time = 0.0;
     static double total_time = 0.0;
 
-    const float f = (float)currentTime;
+    const float f = (float) currentTime;
 
     int i;
 
     vmath::mat4 proj_matrix = vmath::perspective(70.0f,
-                                                 (float)info.windowWidth / (float)info.windowHeight,
+                                                 (float) info.windowWidth / (float) info.windowHeight,
                                                  0.1f, 500.0f);
 
     glViewport(0, 0, info.windowWidth, info.windowHeight);
@@ -184,7 +173,8 @@ void bindlesstex_app::render(double currentTime)
     glFinish();
 
     glBindBufferBase(GL_UNIFORM_BUFFER, 0, buffers.transformBuffer);
-    MATRICES* pMatrices = (MATRICES*)glMapBufferRange(GL_UNIFORM_BUFFER, 0, sizeof(MATRICES), GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+    MATRICES *pMatrices = (MATRICES *) glMapBufferRange(GL_UNIFORM_BUFFER, 0, sizeof(MATRICES),
+                                                        GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
 
     pMatrices->view = vmath::translate(0.0f, 0.0f, -80.0f);
     pMatrices->projection = proj_matrix;
@@ -192,9 +182,10 @@ void bindlesstex_app::render(double currentTime)
     float angle = f;
     float angle2 = 0.7f * f;
     float angle3 = 0.1f * f;
-    for (i = 0; i < NUM_TEXTURES; i++)
-    {
-        pMatrices->model[i] = vmath::translate(float(i % 32) * 4.0f - 62.0f, float(i >> 5) * 6.0f - 33.0f, 15.0f * sinf(angle * 0.19f) + 3.0f * cosf(angle2 * 6.26f) + 40.0f * sinf(angle3)) *
+    for (i = 0; i < NUM_TEXTURES; i++) {
+        pMatrices->model[i] = vmath::translate(float(i % 32) * 4.0f - 62.0f, float(i >> 5) * 6.0f - 33.0f,
+                                               15.0f * sinf(angle * 0.19f) + 3.0f * cosf(angle2 * 6.26f) +
+                                               40.0f * sinf(angle3)) *
                               vmath::rotate(angle * 130.0f, 1.0f, 0.0f, 0.0f) *
                               vmath::rotate(angle * 140.0f, 0.0f, 0.0f, 1.0f);
         angle += 1.0f;
@@ -217,12 +208,10 @@ void bindlesstex_app::render(double currentTime)
     // glDrawArraysInstanced(GL_POINTS, 0, 4900, 384);
 }
 
-void bindlesstex_app::shutdown()
-{
+void bindlesstex_app::shutdown() {
     int i;
 
-    for (i = 0; i < NUM_TEXTURES; i++)
-    {
+    for (i = 0; i < NUM_TEXTURES; i++) {
         glMakeTextureHandleNonResidentARB(textures[i].handle);
         glDeleteTextures(1, &textures[i].name);
     }
@@ -230,8 +219,7 @@ void bindlesstex_app::shutdown()
     glDeleteProgram(program);
 }
 
-void bindlesstex_app::load_shaders()
-{
+void bindlesstex_app::load_shaders() {
     GLuint shaders[2];
 
     shaders[0] = sb7::shader::load("media/shaders/bindlesstex/render.vs.glsl", GL_VERTEX_SHADER);
@@ -240,13 +228,10 @@ void bindlesstex_app::load_shaders()
     program = sb7::program::link_from_shaders(shaders, 2, true);
 }
 
-void bindlesstex_app::onKey(int key, int action)
-{
-    if (action)
-    {
-        switch (key)
-        {
-            case 'R': 
+void bindlesstex_app::onKey(int key, int action) {
+    if (action) {
+        switch (key) {
+            case 'R':
                 load_shaders();
                 break;
         }

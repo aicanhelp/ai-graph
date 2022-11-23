@@ -124,7 +124,7 @@ public:
       glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
     }
 
-    // info.flags.stereo = (glfwGetWindowParam(GLFW_STEREO) ? 1 : 0);
+    // info.flags.09_stereo = (glfwGetWindowParam(GLFW_STEREO) ? 1 : 0);
 
     gl3wInit();
 

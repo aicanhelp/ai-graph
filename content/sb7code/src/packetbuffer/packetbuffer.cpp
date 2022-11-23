@@ -1,5 +1,5 @@
 /*
- * Copyright © 2012-2015 Graham Sellers
+ * Copyright ï¿½ 2012-2015 Graham Sellers
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -454,8 +454,8 @@ void packetrender_app::startup()
     sb7::object object;
     object.load("media/objects/sphere.sbm");
 
-    shaders[0] = sb7::shader::load("media/shaders/blinnphong/blinnphong.vs.glsl", GL_VERTEX_SHADER);
-    shaders[1] = sb7::shader::load("media/shaders/blinnphong/blinnphong.fs.glsl", GL_FRAGMENT_SHADER);
+    shaders[0] = sb7::shader::load("media/shaders/12_blinnphong/12_blinnphong.vs.glsl", GL_VERTEX_SHADER);
+    shaders[1] = sb7::shader::load("media/shaders/12_blinnphong/12_blinnphong.fs.glsl", GL_FRAGMENT_SHADER);
 
     program = sb7::program::link_from_shaders(shaders, 2, true);
 

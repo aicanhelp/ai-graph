@@ -12,7 +12,7 @@
  * Marcus Geelnard:
  *   - Conversion to GLFW
  *   - Time based rendering (frame rate independent)
- *   - Slightly modified camera that should work better for stereo viewing
+ *   - Slightly modified camera that should work better for 09_stereo viewing
  *
  *
  * Camilla Berglund:
