@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.6)
 
 project(superbible7)
 
@@ -45,89 +45,89 @@ add_library(sb7
 set(RUN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
 set(EXAMPLES
-        alienrain
-        5.2-basicfbo
-        bindlesstex
-        blendmatrix
-        blinnphong
-        bumpmapping
-        clipdistance
-        csflocking
-        compressrgtc
-        cubemapenv
-        cubicbezier
-        cullindirect
-        deferredshading
-        depthclamp
+        02.1-simpleclear
+        02.2-singlepoint
+        02.3-singletri
+        03.1-movingtri
+        03.3-tessellatedtri
+        03.4-tessellatedgstri
+        03.6-fragcolorfrompos
+        05-alienrain
+        05.2-basicfbo
+        05.2-spinnycube
+        05-fragmentlist
+        05-ktxview
+        05-simpletexcoords
+        05-simpletexture
+        05-tunnel
+        05-wrapmodes
+        05-indexedcube
+        06-subroutines
+        07-grass
+        07-clipdistance
+        07-springmass
+        07-instancedattribs
+        07-multidrawindirect
+        08-normalviewer
+        08-objectexploder
+        08-multiviewport
+        08-tessellatedcube
+        08-tessmodes
+        08-tesssubdivmodes
+        08-cubicbezier
+        08-dispmap
+        08-gsculling
+        08-gsquads
+        08-gstessellate
+        09-gslayered
+        09-hdrbloom
+        09-hdrexposure
+        09-hdrtonemap
+        09-depthclamp
         dflandscape
-        dispmap
-        dof
-        envmapsphere
-        equirectangular
+        09-sampleshading
+        09-starfield
+        09-stereo
+        09-shapedpoints
+        09-blendmatrix
+        09-linesmooth
+        09-msaanative
+        09-multiscissor
+        09-noperspective
+        09-perpixelgloss
+        09-polygonsmooth
+        10-prefixsum
+        10-dof
+        10-csflocking
+        10-prefixsum2d
+        12-deferredshading
+        12-ssao
+        12-shadowmapping
+        12-blinnphong
+        12-bumpmapping
+        12-raytracer
+        12-rimlight
+        12-toonshading
+        12-cubemapenv
+        12-envmapsphere
+        12-equirectangular
+        12-julia
+        12-phonglighting
+        cullindirect
         fontdemo
-        fragmentlist
-        grass
-        gsculling
-        gslayered
-        gsquads
-        gstessellate
-        hdrbloom
-        hdrexposure
-        hdrtonemap
         hqfilter
-        indexedcube
         indirectmaterial
-        instancedattribs
-        julia
-        ktxview
-        linesmooth
         mirrorclampedge
-        msaanative
-        multidrawindirect
-        multiscissor
-        multiviewport
-        noperspective
-        normalviewer
-        objectexploder
         ompparticles
         packetbuffer
-        perpixelgloss
-        phonglighting
-        polygonsmooth
-        prefixsum
         pmbfractal
         pmbstreaming
-        prefixsum2d
         programinfo
-        raytracer
-        rimlight
-        sampleshading
+        bindlesstex
+        sparsetexture
+        compressrgtc
         # sb6mrender
         sdfdemo
-        shadowmapping
-        shapedpoints
-        simpletexcoords
-        simpletexture
-        2.1-simpleclear
-        2.2-singlepoint
-        2.3-singletri
-        3.1-movingtri
-        3.3-tessellatedtri
-        3.4-tessellatedgstri
-        3.6-fragcolorfrompos
-        sparsetexture
-        5.2-spinnycube
-        springmass
-        ssao
-        starfield
-        stereo
-        subroutines
-        tessellatedcube
-        tessmodes
-        tesssubdivmodes
-        toonshading
-        tunnel
-        wrapmodes
         )
 
 find_package(OpenMP)
