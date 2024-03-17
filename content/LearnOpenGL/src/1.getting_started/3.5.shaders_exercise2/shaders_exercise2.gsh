@@ -1,7 +1,7 @@
 // In your CPP file:
 // ======================
-float offset = 0.5f;
-ourShader.setFloat("xOffset", offset);
+//float offset = 0.5f;
+//ourShader.setFloat("xOffset", offset);
 
 // In your vertex shader:
 // ======================

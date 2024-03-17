@@ -11,6 +11,10 @@ IF(NOT CMAKE_BUILD_TYPE)
   SET(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
 ENDIF(NOT CMAKE_BUILD_TYPE)
 
+if (POLICY CMP0072)
+    set(OpenGL_GL_PREFERENCE LEGACY)
+endif()
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
 
 if(WIN32)
@@ -190,7 +194,9 @@ configure_file(configuration/root_directory.h.in configuration/root_directory.h)
 include_directories(${CMAKE_BINARY_DIR}/configuration)
 
 # first create relevant static libraries requried for other projects
-add_library(STB_IMAGE "src/stb_image.cpp")
+#add_library(STB_IMAGE "src/stb_image.cpp")
+
+add_library(STB_IMAGE "src/stb_image.c")
 set(LIBS ${LIBS} STB_IMAGE)
 
 add_library(GLAD "src/glad.c")
